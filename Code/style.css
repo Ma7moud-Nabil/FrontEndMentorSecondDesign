@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #999;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    margin: 150px auto;
+    width: 630px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.container .result {
+    width: 50%;
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    text-align: center;
+    color: white;
+    padding: 35px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.container .result h3 {
+    color: hsl(241, 100%, 89%);
+}
+
+.container .result div {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin: auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .result div span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.container .result div p {
+    color: hsla(241, 100%, 89%, 0.813);
+}
+
+.container .result p.last {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: hsl(241, 100%, 89%);
+}
+
+.container .result p span {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.container .summary {
+    width: 50%;
+    padding: 35px;
+    font-weight: bold;
+}
+
+.container .summary h3 {
+    color: hsl(224, 30%, 27%);
+    margin-bottom: 30px;
+}
+
+.container .summary div {
+    display: grid;
+    grid-template-areas: "icon par . . . . . . . perc";
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.container .summary div svg {
+    grid-area: icon;
+}
+
+.container .summary div p:first-of-type {
+    grid-area: par;
+}
+
+.container .summary div p:last-of-type {
+    grid-area: perc;
+}
+
+.container .summary div:first-of-type {
+    background-color: hsla(0, 100%, 67%, 0.080);
+}
+
+.container .summary div:first-of-type p:first-of-type {
+    color: hsl(0, 100%, 67%);
+}
+
+.container .summary div:nth-of-type(2) {
+    background-color: hsl(39, 100%, 56%, 0.080);
+}
+
+.container .summary div:nth-of-type(2) p:first-of-type {
+    color: hsl(39, 100%, 56%);
+}
+
+.container .summary div:nth-of-type(3) {
+    background-color: hsl(166, 100%, 37%, 0.080);
+}
+
+.container .summary div:nth-of-type(3) p:first-of-type {
+    color: hsl(166, 100%, 37%);
+}
+
+.container .summary div:nth-of-type(4) {
+    background-color: hsl(234, 85%, 45%, 0.080);
+}
+
+.container .summary div:nth-of-type(4) p:first-of-type {
+    color: hsl(234, 85%, 45%);
+}
+
+.container .summary div p {
+    color: hsla(224, 30%, 27%)
+}
+
+.container .summary div p span {
+    color: hsla(224, 30%, 27%, 0.579);
+}
+
+.container .summary div:last-of-type {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(224, 30%, 27%);
+    font-weight: bold;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    cursor: pointer;
+}
+
+.container .summary div:last-of-type button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container .summary div:last-of-type:hover {
+    background-color: hsl(224, 30%, 27%, .9);
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 350px;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .container .result {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .container .summary {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
